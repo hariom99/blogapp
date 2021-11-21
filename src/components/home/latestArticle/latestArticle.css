@@ -103,7 +103,7 @@ width: 100%;
 {
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 5px;
+    margin-left: 0px;
     margin-right: 0px;
 }
 .latest-article-heading{
@@ -161,7 +161,7 @@ width: 100%;
     width: 95%;
     border-top: 2px solid #cbc3c3;
     /* height: fit-content; */
-    margin: 10px;
+    margin: 2px;
     background-color: rgb(255, 255, 255);
     /* box-shadow: 1px 1px 2px rgb(42, 42, 46); */
 }
