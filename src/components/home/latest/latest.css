@@ -65,7 +65,13 @@
 }
 
 @media screen and (min-width:360px) and  (max-width:700px){
-   
+    .latest-parent{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 5px;
+        margin-right: 0px;
+        
+    }
     
     .latest-heading span{
         border-bottom: 4px solid #F39F9F;
