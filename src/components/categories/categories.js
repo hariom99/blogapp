@@ -36,7 +36,7 @@ export default function Categories(prop) {
                     </span>
                     {blogData[currentPage].map((val, ind) => {
                         if (ind >= loadMore) {
-                            return;
+                            return null;
                         }
                         return <div key={ind} className="category-card" >
                             <img className="category-card-img" src={img1} alt="categoryimage" />
