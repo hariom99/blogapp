@@ -3,16 +3,16 @@ import "./category.css"
 import img1 from "../../images/home/latest-article/img1.jpg";
 // import NavCategories from "../../context/context"; "../../context/contextData";
 import NavCategories from "../../context/context";
-
+import { withRouter } from "react-router";
 
 
 // import NavCategories from "../../context/context";
 
 
-export default function Categories(prop) {
+function Categories(prop) {
 
     let [loadMore, setLoadMore] = useState(3);
-    console.log(typeof loadMore)
+    // console.log(typeof loadMore)
 
     const load = () => {
         setLoadMore((loadMore) => { return loadMore + 2 })
@@ -25,8 +25,20 @@ export default function Categories(prop) {
     // console.log(blogData[currentPage]);
 
     // console.log(prop.match.params.cat);
+
+    const path = prop.history.location.pathname;
+
+    const blogDesc = (id, blogObj) => {
+        // console.log(id);
+        // console.log(blogObj);
+        prop.history.push(path + "/blog/" + id, blogObj);
+        console.log(path + "/" + id);
+    }
+
+
     return (
         <div className="cat-main">
+
             <div className="category-container" >
 
                 {/* return <p key={ind}>{val.blogHead}</p> */}
@@ -38,7 +50,7 @@ export default function Categories(prop) {
                         if (ind >= loadMore) {
                             return null;
                         }
-                        return <div key={ind} className="category-card" >
+                        return <div onClick={() => { blogDesc(ind, val) }} key={ind} className="category-card" >
                             <img className="category-card-img" src={img1} alt="categoryimage" />
                             <div className="category-card-text-container" >
                                 <span className="category-blog-heading">
@@ -133,7 +145,7 @@ export default function Categories(prop) {
     );
 }
 
-
+export default withRouter(Categories);
 
 // {/* <div className="card-text" >
 //     <span className="card-heading" >

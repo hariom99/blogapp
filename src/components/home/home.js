@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "./home.css"
 import Latest from "./latest/latest";
-import LatestArticle from "./latestArticle/latestArticle";
 import TopPosts from "./top-posts/topPosts";
+import Articles from "../../context/articleContext/articleContext";
+import LatestArticle from "./latestArticle/latestArticle";
+
 
 
 export default class Home extends Component {
@@ -29,8 +31,12 @@ export default class Home extends Component {
                 </div>
 
                 <Latest />
-                <LatestArticle />
-                <br />
+
+                <Articles>
+                    <LatestArticle />
+                </Articles>
+
+                {/* <br /> */}
                 <TopPosts />
             </>
         );

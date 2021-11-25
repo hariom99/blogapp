@@ -6,6 +6,7 @@ function Header(prop) {
 
     const navLinks = (comp) => {
         prop.history.push(comp);
+        // console.log(comp.split("/")[2]);
         if (window.innerWidth < 700) {
             toggler();
         }
@@ -19,7 +20,7 @@ function Header(prop) {
     let [navVisible, setNavVisible] = useState(false);
 
     let toggler = () => {
-        console.log(navVisible);
+        // console.log(navVisible);
         if (navVisible) {
             refNav.current.style.display = "none";
             setNavVisible(() => { return !navVisible });
@@ -48,11 +49,11 @@ function Header(prop) {
                 {/* {navVisible ? */}
                 <div ref={refNav} className="nav-link-container" id="nav-link-container" >
                     <li onClick={() => navLinks("/")} >Home</li>
-                    <li onClick={() => navLinks("/bollywood")} >Bollywood</li>
-                    <li onClick={() => navLinks("/technology")} >Technology</li>
-                    <li onClick={() => navLinks("/hollywood")} >Hollywood</li>
-                    <li onClick={() => navLinks("/fitness")} >Fitness</li>
-                    <li onClick={() => navLinks("/food")} >Food</li>
+                    <li onClick={() => navLinks("/category/bollywood")} >Bollywood</li>
+                    <li onClick={() => navLinks("/category/technology")} >Technology</li>
+                    <li onClick={() => navLinks("/category/hollywood")} >Hollywood</li>
+                    <li onClick={() => navLinks("/category/fitness")} >Fitness</li>
+                    <li onClick={() => navLinks("/category/food")} >Food</li>
                 </div>
                 {/* : null} */}
             </ul>
