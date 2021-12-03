@@ -45,7 +45,7 @@ function LatestArticle(props) {
                         }
 
                         return <div onClick={() => viewArticle(ind, val)} className="card" key={ind} >
-                            <img className="lac-img" src={img1} alt="" />
+                            <img className="lac-img" src={val.img} alt="" />
                             <div className="card-text" >
                                 <span className="card-heading" >
                                     {val.heading}

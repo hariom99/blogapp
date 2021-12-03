@@ -2,11 +2,11 @@ import React from "react";
 import img from "../../images/home/latest-article/img1.jpg"
 import "./blogPost.css"
 export default function BlogPost(prop) {
-    console.log(prop.location.state);
+    // console.log(prop.location.state.img);
     return (
         <div className="container-blog" >
 
-            <img className="bimg" src={img} alt="hii" />
+            <img className="bimg" src={prop.location.state.img} alt="hii" />
             <h1>{prop.location.state.blogHead}</h1>
             <div>{prop.location.state.blogDesc +
                 prop.location.state.blogDesc +

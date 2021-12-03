@@ -1,12 +1,12 @@
 import React from "react";
-import img from "../../images/home/latest-article/img1.jpg"
+// import img from "../../images/home/latest-article/img1.jpg"
 import "./articles.css"
 
 export default function ViewArticles(prop) {
-    console.log(prop.location.state);
+    // console.log(prop.location.state);
     return (
         <div className="article-container" >
-            <img className="aimg" src={img} alt="hii" />
+            <img className="aimg" src={prop.location.state.img} alt="hii" />
             <h1>{prop.location.state.heading}</h1>
             <div>{prop.location.state.desc +
                 prop.location.state.desc +
@@ -15,6 +15,7 @@ export default function ViewArticles(prop) {
 
             <h4>{prop.location.state.type}</h4>
             <span>{prop.location.state.date}</span>
+
         </div>
     );
 }

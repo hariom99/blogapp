@@ -8,8 +8,12 @@ import BlogData from './context/contextData';
 import ViewArticles from "./components/articles/articles"
 import pageNotFound from './components/notFound/pageNotFound';
 import BlogPost from './components/blogPost/blogPost';
-
-
+import Post1 from './components/home/homePosts/post1';
+import Post2 from './components/home/homePosts/post2';
+import Post3 from './components/home/homePosts/post3';
+import LatestPost1 from './components/latestPosts/latestPost1';
+import LatestPost2 from './components/latestPosts/latestPost2';
+import LatestPost3 from './components/latestPosts/latestPost3';
 
 // import Cate from './components/categories/cate'
 
@@ -22,6 +26,16 @@ function App() {
 
     <Switch>
       <Route exact path="/" component={Home} />
+
+      <Route exact path="/post1" component={Post1} />
+      <Route exact path="/post2" component={Post2} />
+      <Route exact path="/post3" component={Post3} />
+
+
+      <Route exact path="/latest-1" component={LatestPost1} />
+      <Route exact path="/latest-2" component={LatestPost2} />
+      <Route exact path="/latest-3" component={LatestPost3} />
+
       <Route exact path="/articles/:id" component={ViewArticles} />
 
 

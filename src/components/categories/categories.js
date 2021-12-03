@@ -1,15 +1,14 @@
 import React, { useContext, useState } from "react";
 import "./category.css"
 import img1 from "../../images/home/latest-article/img1.jpg";
-// import NavCategories from "../../context/context"; "../../context/contextData";
 import NavCategories from "../../context/context";
 import { withRouter } from "react-router";
 
 
-// import NavCategories from "../../context/context";
-
 
 function Categories(prop) {
+
+
 
     let [loadMore, setLoadMore] = useState(3);
     // console.log(typeof loadMore)
@@ -20,7 +19,7 @@ function Categories(prop) {
 
     const blogData = useContext(NavCategories);
     const currentPage = prop.match.params.cat;
-    // console.log(blogData);
+    // console.log(blogData.bollywood[0].img);
     // console.log(currentPage);
     // console.log(blogData[currentPage]);
 
@@ -32,7 +31,7 @@ function Categories(prop) {
         // console.log(id);
         // console.log(blogObj);
         prop.history.push(path + "/blog/" + id, blogObj);
-        console.log(path + "/" + id);
+        // console.log(path + "/" + id);
     }
 
 
@@ -51,26 +50,23 @@ function Categories(prop) {
                             return null;
                         }
                         return <div onClick={() => { blogDesc(ind, val) }} key={ind} className="category-card" >
-                            <img className="category-card-img" src={img1} alt="categoryimage" />
+                            <img className="category-card-img" src={val.img} alt="categoryimage" />
                             <div className="category-card-text-container" >
                                 <span className="category-blog-heading">
-                                    {/* Catch waves with adventure
-                            guide */}
+
                                     {val.blogHead}
                                 </span>
                                 <p className="category-blog-desc">
-                                    {/* Gujarat is vastly underrated
-                                and it's a mystery the region is'nt <br />a mystery the region is'nt
-                                more well */}
+
                                     {val.blogDesc}
                                 </p>
                                 <p>
                                     <span className="category-travel" >
-                                        {/* Travel */}
+
                                         {val.type}
                                     </span>
                                     <span className="category-date">
-                                        {/* / August 21 2021 */}
+
                                         {val.date}
                                     </span>
                                 </p>
