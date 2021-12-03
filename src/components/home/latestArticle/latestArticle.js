@@ -4,7 +4,7 @@ import { ArticlesContext } from "../../../context/articleContext/articleContext"
 import "./latestArticle.css"
 
 /* images import starts */
-import img1 from "../../../images/home/latest-article/img1.jpg"
+// import img1 from "../../../images/home/latest-article/img1.jpg"
 /* images import ends */
 
 
