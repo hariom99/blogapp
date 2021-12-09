@@ -15,6 +15,12 @@ h4{
     display: inline;
 }
 
+.suggested-articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 @media screen and (min-width:360px) and (max-width:700px) {
     .container-blog{
         margin-top: 5%;

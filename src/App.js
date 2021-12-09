@@ -25,28 +25,29 @@ function App() {
     {/* </BlogData> */}
 
     <Switch>
-      <Route exact path="/" component={Home} />
+      <BlogData>
+        <Route exact path="/" component={Home} />
 
-      <Route exact path="/post1" component={Post1} />
-      <Route exact path="/post2" component={Post2} />
-      <Route exact path="/post3" component={Post3} />
-
-
-      <Route exact path="/latest-1" component={LatestPost1} />
-      <Route exact path="/latest-2" component={LatestPost2} />
-      <Route exact path="/latest-3" component={LatestPost3} />
-
-      <Route exact path="/articles/:id" component={ViewArticles} />
+        <Route exact path="/post1" component={Post1} />
+        <Route exact path="/post2" component={Post2} />
+        <Route exact path="/post3" component={Post3} />
 
 
-      <Route exact path="/category/:cat/blog/:path" component={BlogPost} />
-      {/* <Route exact path="/category/hollywood/blog/:path" component={BlogPost} />
+        <Route exact path="/latest-1" component={LatestPost1} />
+        <Route exact path="/latest-2" component={LatestPost2} />
+        <Route exact path="/latest-3" component={LatestPost3} />
+
+        <Route exact path="/articles/:id" component={ViewArticles} />
+
+
+        <Route exact path="/category/:cat/blog/:path" component={BlogPost} />
+        {/* <Route exact path="/category/hollywood/blog/:path" component={BlogPost} />
       <Route exact path="/category/fitness/blog/:path" component={BlogPost} />
       <Route exact path="/category/food/blog/:path" component={BlogPost} />
       <Route exact path="/category/technology/blog/:path" component={BlogPost} /> */}
 
 
-      <BlogData>
+
         <Route exact path="/category/:cat" component={Categories} >
 
         </Route>
