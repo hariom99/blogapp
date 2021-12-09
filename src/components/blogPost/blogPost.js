@@ -12,7 +12,7 @@ export default function BlogPost(prop) {
     const blogData = useContext(NavCategories);
     // console.log(blogData[prop.location.pathname.split("/")[2]]);
     const suggestArticle = blogData[prop.location.pathname.split("/")[2]];
-    console.log(suggestArticle);
+    // console.log(suggestArticle);
     return (
         <>
             <div className="container-blog" >
